@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'mainsite/base.css' %}">
+</head>
+<body>
+    <form action="" method='POST' novalidate>
+        {% csrf_token %}
+        <h2>Sign Up!</h2>
+        {% if .errors %}
+        <p class='errorheading'>Please correct the following errors!!!!</p>
+        {% elif  done %}
+        <p class='successheading'>Thank you for registering with us <br>
+        Please <a href={% url 'signin' %}>login</a>to access your account</p>
+        {% endif %}
+        <table>    
+         {{regobj}}
+        </table>
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+</html>

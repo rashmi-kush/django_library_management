@@ -1,0 +1,10 @@
+.errorlist{
+      list-style-type: none;
+      color: crimson;
+}
+p.errorheading{
+    color: crimson;
+}
+p.successheading{
+    color: rgb(75, 236, 75);
+}

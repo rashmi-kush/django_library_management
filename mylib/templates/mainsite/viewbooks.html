@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Booklist</h1>
+
+        <ul class=" text-light list-inline">
+            <div class="row">
+            <li class="list-inline-item">
+                <div class="col-4">
+                <div class="card ">
+                    <img src="{% static "login/images/lbs2.jpg" %}">
+                    <div class="card-boby">
+                          <h4 class="card-title">As a Men thinketh</h4>
+                          <button type="button" class="btn btn-primary">Remove</button>
+                    </div>
+                </div>
+            </div>
+            </li>
+            <li class="list-inline-item">
+                <div class="col-4">
+                <div class="card">
+                    <img src="{% static "login/images/lbs3.jpg" %}">
+                    <div class="card-boby">
+                          <h4 class="card-title">Our story needs no filter </h4>
+                          <button type="button" class="btn btn-primary">Remove</button>
+                    </div>
+                </div>
+            </div>
+            </li>
+            
+            <li class="list-inline-item">
+                <div class="col-4">
+                <div class="card">
+                    <img src="{% static "login/images/lms4.jpg" %}">
+                    <div class="card-boby">
+                          <h4 class="card-title">2 STATES </h4>
+                          <button type="button" class="btn btn-primary">Remove</button>
+                    </div>
+                </div>
+            </div>
+            </li>
+        </div>
+        </ul>
+    </nav>
+    </div>
+</body>
+</html>

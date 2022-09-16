@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link  rel="stylesheet" href="/Bootstrap/css1/bootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="mystyle.css" >
+</head>
+<body>
+    <div class="container-fluid6">      
+    <nav class="navbar navbar-dark bg-dark">
+        <ul class="list-inline navbar-nav">
+            <li class="list-inline-item lielements  nav-item" >
+                <a href="#" class="lielements nav-link" id="mylib">My Library</a></li>
+            <li class="list-inline-item  nav-item"><a href={% url 'booklist' %} class="lielements nav-link ">Books</a></li>
+            <li class="list-inline-item  nav-item"><a href={% url 'signup' %} class="lielements nav-link">Admin Login</a></li>
+        </ul>
+    </nav>
+      {% block maincontent %}
+       <h1 class="h1">Welcome To Library Management System</h1>
+      {% endblock %} 
+</div>
+ <script href="/Bootstrap/js/jquery.js"></script>
+ <script href="/Bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>

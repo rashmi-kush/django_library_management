@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Booklist</h1>
+        <ul class="list-group todos mx-auto text-light">
+            <li>
+                <div class="card ">
+                    <img src="{% static "login/images/lbs2.jpg" %}">
+                    <div class="card-boby">
+                          <h4 class="card-title">As a Men thinketh</h4>
+                          <button type="button" class="btn btn-primary">Remove</button>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <div class="card">
+                    <img src="{% static "login/images/lms4.jpg" %}">
+                    <div class="card-boby">
+                          <h4 class="card-title">2 STATES </h4>
+                          <button type="button" class="btn btn-primary">Remove</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <img src="{% static "login/images/ims5.jpg" %}">
+                    <div class="card-boby">
+                          <h4 class="card-title"> Charlottes Web </h4>
+                          <button type="button" class="btn btn-primary">Remove</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <form class="add text-center my-4" name="addfrm">
+            <label class="text-light">Add a new Book....</label>
+            <input class="form-control ma-auto" type="image" name="add">
+            <input class="form-control ma-auto" type="text" name="add">
+       </form>
+    </div>
+    <script>const addform=document.addfrm;
+        const text=addfrm.add;
+        const ul=document.querySelector(".todos");
+        function additem(newbook,netit)
+        {
+            let img=<li class="list-group-item"> 
+                <div class="card">
+                    <img src="{newbook}"/>
+                    <div class="card-boby">
+                          <h4 class="card-title">{netit}</h4>
+                          <button type="button" class="btn btn-primary">Remove</button>
+                    </div>
+                </div>
+                </li>;
+            ul.innerHTML+= img;
+                        
+        }
+        addform.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            let item=text.value.trim();
+            console.log(item);
+            if(item.length>0)
+            { additem(item);
+              text.value=""}
+        });
+        ul.addEventListener("click",(e)=>{
+            if (e.target.nodeName=="I")
+            {e.target,parentElement.remove();}
+        });
+        
+        </script>
+</body>
+</html>
